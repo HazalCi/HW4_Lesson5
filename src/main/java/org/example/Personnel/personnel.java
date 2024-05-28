@@ -1,18 +1,21 @@
 package org.example.Personnel;
 import java.util.ArrayList;
-import java.util.List;
+
 
 class personnel {
-    String name;
-    static List<String> personnelList = new ArrayList<>();
 
-    static void addPerson(String name) {
-        personnelList.add(name);
+    static ArrayList<personnel> personnelList = new ArrayList<>();
+    String name;
+    String title;
+    int registryno;
+
+    static void addPerson(personnel person) {
+        personnelList.add(person);
     }
 
     static void printPersonnelList() {
-        for (String person : personnelList) {
-            System.out.println(person);
+        for (personnel person : personnelList) {
+            System.out.println("Name: " + person.name  + "\nTitle: " + person.title + "\nRegistry No: " + person.registryno  + " \n-----\n");
         }
     }
 }

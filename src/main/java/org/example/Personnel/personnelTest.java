@@ -2,13 +2,21 @@ package org.example.Personnel;
 
 public class personnelTest {
     public static void main(String[] args) {
-        personnel person1 = new personnel();
-        personnel person2 = new personnel();
-        person1.name ="Hazal";
-        person2.name ="Mehmet";
-        personnel.addPerson(person1.name);
-        personnel.addPerson(person2.name);
-        personnel.printPersonnelList();
+        personnelListAdding("Hazal", "Software Test Engineer", 12345);
+        personnelListAdding("Mehmet", "System Design Engineer", 23456);
+        personnelListAdding("Betül", "Software Engineer", 34567);
 
+        personnel.printPersonnelList();
+    }
+
+    //personnel class'ından person objesi oluşturma ve personnel objesi olan listeye ekleme
+    public static void personnelListAdding(String name, String title, int regno) {
+
+        personnel person = new personnel();
+        person.name = name;
+        person.title = title;
+        person.registryno = regno;
+
+        personnel.addPerson(person);
     }
 }
